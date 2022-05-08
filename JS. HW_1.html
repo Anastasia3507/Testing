@@ -1,0 +1,45 @@
+<!-- 4***:
+Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+    let age_1 = 10
+let age_2 = 18
+let age_3 = 60
+
+const checkAge = function(age) {  
+    if(+age) {
+        if (age < age_2) {
+            console.log("You don't have access cause your age is " + age + " It's less then")
+        }
+        else if (age >= age_2 && age < age_3) {
+            console.log("Welcom!")
+        }
+        else if (age > age_3) {
+            console.log("Keep calm and look Culture channel")
+        } else {
+            console.log("Technical work")
+        }
+    }
+    else {
+        console.log("Error")
+    }
+    
+}
+
+checkAge("xdf")
+
+let agePrompt = prompt('Enter age')
+checkAge(agePrompt)
+</script>
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
