@@ -30,8 +30,10 @@ print(sumProperty)
 
 let numberOne = 30
 let numberTwo = 20
+
 let result = numberOne / numberTwo 
 let remainder = numberOne % numberTwo
+
 print ("При делении \(numberOne) на \(numberTwo) результат равен \(result), остаток равен \(remainder).")
 print ("Результат деления \(numberOne) на \(numberTwo) равен \(result) \(remainder)/\(numberTwo)")
 
@@ -93,8 +95,6 @@ if monthOfBirt > 0 && monthOfBirt <= 3 {
  Задание на вашу способность гуглить. Необходимо вычислить синус от числа 1 и округлить результат до тысячных. Для получения результата радианы искать не надо. Достаточно найти нужную функцию и она все сделает за вас.
  > Подсказка: в результате должно получиться 0.841
  */
-
-import Foundation
 
 var sineOfAnAngle = sin(1.0)
 sineOfAnAngle = round(sineOfAnAngle * 1000) / 1000
