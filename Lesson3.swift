@@ -2,20 +2,20 @@
  ## Задание 1
  Представьте, что вы владелец розничного магазина и вам необходимо установить стоимость товара в зависимости от его количества. До 9 единиц товара включительно цена составляет 1000 рублей за штуку. От 10 до 19 единиц товара включительно - 800 руб. шт. И 600 рублей за товар от 20 единиц и выше. Создайте условие при котором цене будет присвоено соответсвующее значение, используя конструкцию `if-else`. Подсчитайте общую сумму и выведите результат на консоль.
  */
-var quantityOfGoods = 18
-var PriceOfTheProduct = 0
+let quantityOfGoods = 18
+let PriceOfTheProduct: Int
 
-if quantityOfGoods <= 9 {
+if quantityOfGoods < 0 {
+    PriceOfTheProduct = 0
+} else if quantityOfGoods < 10 {
     PriceOfTheProduct = 1000
-} else if quantityOfGoods >= 10 && quantityOfGoods <= 19 {
+} else if quantityOfGoods < 20 {
     PriceOfTheProduct = 800
-} else if quantityOfGoods > 20 {
-    PriceOfTheProduct = 600
 } else {
-    print("Error")
+    PriceOfTheProduct = 600
 }
 
-print("Цена за \(quantityOfGoods) единиц товара составляет \(quantityOfGoods * PriceOfTheProduct) рублей")
+print("Цена за \(quantityOfGoods) единиц товара составляет \(quantityOfGoods * PriceOfTheProduct)")
 
 /*:
  ## Задание 2*
@@ -26,7 +26,7 @@ print("Цена за \(quantityOfGoods) единиц товара составл
  В случае возникновения ситуации **A** необходимо "Выключить все электрические приборы". **B** - "Закрыть входные двери и окна". **C** - "Соблюдать спокойствие"
  */
 
-let readinessLevel = "A"
+let readinessLevel: Character = "A"
 
 switch readinessLevel {
 case "A":
@@ -38,7 +38,7 @@ case "B":
 case "C":
     print("Соблюдать спокойствие")
 default:
-    print("Error")
+    break
 }
 
 
@@ -55,11 +55,11 @@ let candyFilling = "nuts"
 
 switch candyColor {
 case "red" where candyFilling == "chocolate":
-    print("Красные конфеты с шоколадом")
+  print("Красные конфеты с шоколадом")
 case "yellow" where candyFilling == "nuts":
     print("Желтые конфеты с орехами")
 case "brown" where candyFilling == "chocolate", "green" where candyFilling == "chocolate":
     print("Коричневые с шоколадом и зеленые с шоколадом")
 default:
-    print("Error")
+    break
 }
