@@ -15,7 +15,7 @@ if quantityOfGoods <= 9 {
     print("Error")
 }
 
-print("Цена за \(quantityOfGoods) единиц товара составляет \(quantityOfGoods * thePriceOfTheProduct) рублей")
+print("Цена за \(quantityOfGoods) единиц товара составляет \(quantityOfGoods * PriceOfTheProduct) рублей")
 
 /*:
  ## Задание 2*
