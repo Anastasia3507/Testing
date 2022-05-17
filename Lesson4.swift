@@ -27,8 +27,8 @@ var integers = [13, 44, 3, 87, 24, 65, 2, 80]
 
 //: 2.2 Выведите на консоль все четные числа из массива
 
-for integ in integers where integ % 2 == 0 {
-        print(integ)
+for integer in integers where integer % 2 == 0 {
+        print(integer)
 }
 
 /*: 2.3* В циклах для перехода к следующей итерации без выполнения последующего кода можно использовать оператор `Continue`. В этом случае весь последующий код игнорируется.
@@ -36,12 +36,11 @@ for integ in integers where integ % 2 == 0 {
  Используя оператор `Continue` выведите на консоль все нечетные числа из массива. Для этого нужно выполнить проверку на четность числа, и если оно оказалось четным перейти к следующей итерации.
 */
 
-for integ in integers {
-    if integ % 2 == 0 {
+for integer in integers {
+    if integer % 2 == 0 {
         continue
-    } else {
-        print(integ)
     }
+    print(integer)
 }
 
 /*: ## Задание 3
