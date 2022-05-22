@@ -80,7 +80,6 @@ func returningAnIncreasingArray(_ x: Int, and y: Int) -> [Int] {
 
 let result = returningAnIncreasingArray(1, and: 100)
 
-// print(result)
 
 /*:
  3.5 Создайте функцию для фильтрации переданного в неё массива. Функция должна возвращать новый массив без четных чисел. Для определения фильтруемых значений используйте ранее созданную функцию из задания **3.1**.
@@ -96,8 +95,6 @@ let result = returningAnIncreasingArray(1, and: 100)
      return number
  }
 
-print(filtersData(result))
-
 /*:
  3.6 Создайте функцию для фильтрации переданного в неё массива. Функция должна возвращать новый массив без чисел кратных трем. Для определения фильтруемых значений используйте ранее созданную функцию из задания **3.2**.
  */
@@ -112,10 +109,8 @@ print(filtersData(result))
      return number
  }
 
-print(filtersArray(result))
-
 /*:
  3.7 Отфильтруйте массив из задания **3.4** при помощи двух последний функций.
  */
-print(filtersData(result))
-print(filtersArray(result))
+result = filtersData(result)
+result = filtersArray(result)
