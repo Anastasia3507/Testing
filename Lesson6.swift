@@ -4,11 +4,11 @@
 1.1 Повторите задания 3.1 - 3.4 прошлого урока.
  */
 
-func evenNumber(_ integer: Int) -> Bool {
+func isEvenNumber(_ integer: Int) -> Bool {
   return integer % 2 == 0
 }
 
-func evenNumberByThree(_ integer: Int) -> Bool {
+func isEvenNumberByThree(_ integer: Int) -> Bool {
   return integer % 3 == 0
 }
 
@@ -49,8 +49,8 @@ func filtersTheArray(integers: [Int], function: (Int) -> Bool) -> [Int] {
  1.3 Отфильтруйте массив при помощи созданной функции, избавившись от всех четных чисел и чисел кратных трем. Для фильтрации используйте функции, определяющие кратность чисел.
  */
 
-result = filtersTheArray(integers: result, function: evenNumber)
-result = filtersTheArray(integers: result, function: evenNumberByThree)
+result = filtersTheArray(integers: result, function: isEvenNumber)
+result = filtersTheArray(integers: result, function: isEvenNumberByThree)
 
 /*:
  1.4 Снова наполните массив числами от 1 до 100 и отфильтруйте его, используя блок замыкания универсальной функции.
