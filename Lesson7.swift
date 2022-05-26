@@ -25,7 +25,31 @@ import UIKit
  Выведите на консоль сообщение: «Orange has <...> color and <...> taste. The volume of orange is <...>», обращаясь к этим значениям через экземпляр класса.
  */
 
+class Orange {
+  var color: String
+  var taste: String
+  let radius: Double
 
+  var orangeVolume: Double {
+    calculateOrangeVolume()
+  }
+
+  init(color: String = "", taste: String = "", radius: Double) {
+    self.color = color
+    self.taste = taste
+    self.radius = radius
+  } 
+
+  private func calculateOrangeVolume() -> Double {
+    4 / 3 * Double.pi * pow(radius, 3)
+  }
+}
+ 
+let orange = Orange(radius: 95)
+orange.color = "Orenge"
+orange.taste = "Sweet"
+
+print("Orange has \(orange.color) color and \(orange.taste) taste. The volume of orange is \(orange.orangeVolume)")
  
 /*:
  ## Задание 2
