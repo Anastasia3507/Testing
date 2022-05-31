@@ -108,9 +108,28 @@ print(ellipse.description)
  Так же необходимо реализовать метод `increasePower`, который должен увеличить мощность автомобиля на заданное количество лошадиных сил.
   */
 
+struct Car {
+  var model: String
+  var power: Int
+  
+  var description: String {
+    "Машина \(model), \(power) лошадиных сил"
+  }
 
+  mutating func increasePower(power: Int) {
+    self.power += power
+  }
+
+}
 
 /*:
  2.2 Создайте экземпляр структуры и инициализируйте её свойства. Выведите значение свойства `description` на консоль, а затем вызовите метод `increasePower`. Снова выведите значение свойства `description` на консоль.
 */
 
+var car = Car(model: "Hyundai", power: 1000)
+
+print(car.description)
+
+car.increasePower(power: 1100)
+
+print(car.description)
