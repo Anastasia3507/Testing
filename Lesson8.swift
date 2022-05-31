@@ -14,19 +14,19 @@
  */
 
 class Shape {
+
   var square: Double {
   0.0
   }
+
   var perimeter: Double {
   0.0
   }
+
   var description: String {
-    descriptions()
+    "Square of shape \(type(of: self)) is \(square). Perimeter - \(perimeter)"
   }
 
-  func descriptions() -> String {
-    ""
-  }
 }
 
 /*:
@@ -34,6 +34,7 @@ class Shape {
  */
 
 class Circle: Shape {
+
   var radius: Double
 
   init(radius: Double) {
@@ -43,18 +44,15 @@ class Circle: Shape {
   override var square: Double {
     Double.pi * pow(radius, 2)
   }
+
   override var perimeter: Double {
     2 * Double.pi * radius
   }
-
-  override func descriptions() -> String {
-    "Square of shape  is \(square). Perimeter - \(perimeter)"
-  }
-
   
 }
 
 class Rectangle: Shape {
+
   var length: Double
   var width: Double
 
@@ -81,6 +79,7 @@ class Ellipse: Rectangle {
   override var square: Double {
     Double.pi * length * width
   }
+
   override var perimeter: Double {
     Double.pi * (length + width)
   }
@@ -90,11 +89,12 @@ class Ellipse: Rectangle {
 //: 1.4 Создайте по экземпляру каждого класса, кроме `Shape` и выведите значение свойства `description` на консоль.
 
 let circle = Circle(radius: 12)
-circle.description()
-
 let rectangle = Rectangle(length: 3, width: 6)
 let ellipse = Ellipse(length: 5, width: 11)
 
+print(circle.description)
+print(rectangle.description)
+print(ellipse.description)
 
 /*:
  ## Задание 2
